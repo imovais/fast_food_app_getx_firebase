@@ -1,3 +1,4 @@
+import 'package:fast_food_app_getx_firebase/Utils/Constant/colors.dart';
 import 'package:flutter/material.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -8,6 +9,9 @@ class Mydrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      surfaceTintColor: Appcolor.grey,
+      elevation: 10,
+      backgroundColor: Appcolor.primary,
       child: ListView(
         children: [
           ListTile(

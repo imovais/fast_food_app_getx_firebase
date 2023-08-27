@@ -8,31 +8,20 @@ class ExploreSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      height: size.height / 4,
-      color: Appcolor.grey,
+      height: size.height / 3,
+      //color: Appcolor.grey,
       child: Row(
         children: [
           //first column
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  image: const DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage('images/card02.png')),
-                  border: Border.all(
-                      color: Appcolor.primary, style: BorderStyle.solid),
-                  borderRadius: BorderRadius.circular(15)),
-            ),
+          const Expanded(
+            child: MyCard(myytext: 'Everyday \nValue', image: 'images/p1.png'),
           ),
           //second column
           Expanded(
             child: Column(
               children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                ),
+                const Expanded(
+                    child: MyCard(myytext: 'Hello', image: 'images/p1.png')),
                 Expanded(
                   child: Container(
                     color: Colors.blue.shade200,
@@ -65,6 +54,51 @@ class ExploreSection extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class MyCard extends StatelessWidget {
+  const MyCard({
+    super.key,
+    required this.myytext,
+    required this.image,
+  });
+
+  final String myytext;
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 5,
+      child: Stack(
+        //mainAxisAlignment: MainAxisAlignment.,
+        children: [
+          Positioned(
+              top: 10,
+              left: 5,
+              child: Center(
+                  child: Text(
+                myytext,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ))),
+          Positioned(
+            child: Center(
+              child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.contain, image: AssetImage('images/p1.png')),
+                  // border: Border.all(
+                  //     color: Appcolor.primary, style: BorderStyle.solid),
+                  // borderRadius: BorderRadius.circular(15)),
+                ),
+              ),
             ),
           )
         ],
