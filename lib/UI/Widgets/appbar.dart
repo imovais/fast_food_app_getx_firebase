@@ -37,7 +37,10 @@ AppBar myappbar() {
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.access_time_sharp),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Image(image: AssetImage('images/delivery.png')),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
@@ -48,16 +51,20 @@ AppBar myappbar() {
             ),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
-                    color: Appcolor.grey,
-                    border: Border.all(color: Appcolor.primary, width: 1)),
+                decoration: const BoxDecoration(
+                  color: Appcolor.grey,
+                  //>border: Border.all(color: Appcolor.primary, width: 1)
+                ),
                 height: 40,
                 width: double.infinity,
                 margin: const EdgeInsets.symmetric(horizontal: 5),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.access_time_sharp),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Image(image: AssetImage('images/pickup.png')),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
