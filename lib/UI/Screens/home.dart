@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../Widgets/appbar.dart';
 import '../Widgets/card_coursel.dart';
 import '../Widgets/drawer.dart';
+import '../Widgets/explore_section.dart';
 import '../Widgets/title_text_redline.dart';
 
 class Home extends StatelessWidget {
@@ -38,6 +39,7 @@ class Home extends StatelessWidget {
                     // mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      //reorder button
                       Container(
                         alignment: Alignment.center,
                         //margin: EdgeInsets.symmetric(vertical: 10),
@@ -74,7 +76,10 @@ class Home extends StatelessWidget {
                             ),
                           )
                         ],
-                      )
+                      ),
+
+                      //explore section
+                      ExploreSection()
                     ],
                   ),
                 )
